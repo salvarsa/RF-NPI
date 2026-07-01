@@ -2,16 +2,20 @@
    This software is licensed under the MIT License:
    https://github.com/cifertech/rfclown
    ________________________________________ */
-   
+
 #include "setting.h"
 #include "config.h"
 
+/* NeoPixel deshabilitado: este hardware no se usa actualmente.
+   Se deja comentado por si se implementa mas adelante. */
+
+/*
 extern Adafruit_NeoPixel pixels;
 
 void neopixelSetup() {
-  EEPROM.begin(512); 
+  EEPROM.begin(512);
   neoPixelActive = EEPROM.read(0);
-  
+
  if (neoPixelActive) {
   pixels.begin();
   pixels.clear();
@@ -22,7 +26,7 @@ void neopixelSetup() {
 void neopixelLoop();
 
 void setNeoPixelColour(const std::string& colour) {
-  uint32_t colorValue = 0; 
+  uint32_t colorValue = 0;
 
   if (colour == "red") {
     colorValue = pixels.Color(5, 0, 0);
@@ -60,3 +64,4 @@ void flash(int numberOfFlashes, const std::vector<std::string>& colors, const st
   }
   setNeoPixelColour(finalColour);
 }
+*/
