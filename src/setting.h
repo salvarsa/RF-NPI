@@ -8,26 +8,25 @@
 
 #include <BLEDevice.h>
 #include <U8g2lib.h>
-#include <Adafruit_NeoPixel.h>
+// NeoPixel deshabilitado: no se usa este hardware actualmente.
+// #include <Adafruit_NeoPixel.h>
 #include <EEPROM.h>
 #include <RF24.h>
 #include <vector>
 #include <string>
 #include <SPI.h>
 
-void neopixelSetup();
-void neopixelLoop();
+// void neopixelSetup();
+// void neopixelLoop();
 
-void setNeoPixelColour(const std::string& colour);
-void flash(int numberOfFlashes, const std::vector<std::string>& colors, const std::string& finalColour);
+// void setNeoPixelColour(const std::string& colour);
+// void flash(int numberOfFlashes, const std::vector<std::string>& colors, const std::string& finalColour);
 
 extern U8G2_SSD1306_128X64_NONAME_F_HW_I2C u8g2;
-extern Adafruit_NeoPixel pixels;
+// extern Adafruit_NeoPixel pixels; // NeoPixel deshabilitado
 
-//extern bool neoPixelActive;
-
-bool neoPixelActive = false;
-uint8_t oledBrightness = 100;
+// extern bool neoPixelActive; // NeoPixel deshabilitado
+extern uint8_t oledBrightness;
 
 extern RF24 RadioA;
 extern RF24 RadioB;

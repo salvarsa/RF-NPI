@@ -10,6 +10,9 @@ RF24 RadioA(NRF_CE_PIN_A, NRF_CSN_PIN_A);
 RF24 RadioB(NRF_CE_PIN_B, NRF_CSN_PIN_B);
 RF24 RadioC(NRF_CE_PIN_C, NRF_CSN_PIN_C);
 
+// bool neoPixelActive = false; // NeoPixel deshabilitado
+uint8_t oledBrightness = 100;
+
 void setRadiosNeutralState() {
   RadioA.stopListening();
   RadioA.setAutoAck(false);
